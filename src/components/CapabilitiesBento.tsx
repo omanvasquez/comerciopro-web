@@ -1,5 +1,8 @@
 import React from 'react';
 import { ShoppingBag, Package, BarChart3, Receipt, ArrowRight } from 'lucide-react';
+import posImg from '../assets/images/feature_pos_multicurrency_1791402415310.jpg';
+import inventoryImg from '../assets/images/feature_inventory_stock_1791402426884.jpg';
+import analyticsImg from '../assets/images/feature_analytics_finance_1791402435912.jpg';
 
 export default function CapabilitiesBento() {
   return (
@@ -41,7 +44,10 @@ export default function CapabilitiesBento() {
           <div className="px-6 pb-6 sm:px-8 sm:pb-8">
             <div className="relative rounded-xl overflow-hidden border border-slate-800/80 aspect-[16/9] bg-slate-950">
               <img
-                src="/src/assets/images/feature_pos_multicurrency_1791402415310.jpg"
+                src={posImg}
+                onError={(e) => {
+                  e.currentTarget.src = '/images/feature_pos_multicurrency.jpg';
+                }}
                 alt="Terminal POS ComercioPro multimoneda con escáner de códigos"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
@@ -76,7 +82,10 @@ export default function CapabilitiesBento() {
           <div className="px-6 pb-6 sm:px-8 sm:pb-8">
             <div className="relative rounded-xl overflow-hidden border border-slate-800/80 aspect-[4/3] bg-slate-950">
               <img
-                src="/src/assets/images/feature_inventory_stock_1791402426884.jpg"
+                src={inventoryImg}
+                onError={(e) => {
+                  e.currentTarget.src = '/images/feature_inventory_stock.jpg';
+                }}
                 alt="Gestión de inventario y stock de almacén con tablet digital"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"
@@ -110,7 +119,10 @@ export default function CapabilitiesBento() {
           <div className="px-6 pb-6 sm:px-8 sm:pb-8">
             <div className="relative rounded-xl overflow-hidden border border-slate-800/80 aspect-[4/3] bg-slate-950">
               <img
-                src="/src/assets/images/feature_analytics_finance_1791402435912.jpg"
+                src={analyticsImg}
+                onError={(e) => {
+                  e.currentTarget.src = '/images/feature_analytics_finance.jpg';
+                }}
                 alt="Métricas financieras y arqueo de caja diario en monitor y tablet"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105"

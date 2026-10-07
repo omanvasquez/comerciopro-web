@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ExternalLink, Github, ArrowRight, CheckCircle2, Shield, Zap, Sparkles } from 'lucide-react';
+import heroImg from '../assets/images/hero_comerciopro_pos_1791402405339.jpg';
 
 export default function Hero() {
   return (
@@ -75,7 +76,10 @@ export default function Hero() {
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 shadow-2xl shadow-black/80 group">
               <img
-                src="/src/assets/images/hero_comerciopro_pos_1791402405339.jpg"
+                src={heroImg}
+                onError={(e) => {
+                  e.currentTarget.src = '/images/hero_comerciopro_pos.jpg';
+                }}
                 alt="Terminal Punto de Venta ComercioPro en funcionamiento"
                 referrerPolicy="no-referrer"
                 className="w-full h-auto object-cover aspect-[16/10] sm:aspect-[16/9] lg:aspect-[4/3] transform transition-transform duration-700 group-hover:scale-105"
